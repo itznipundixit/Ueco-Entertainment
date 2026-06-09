@@ -20,6 +20,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
+          command_timeout: 30m
 
           script: |
             cd /home/ec2-user/Ueco-Entertainment
@@ -30,4 +31,6 @@ jobs:
 
             npm run build
 
-            pm2 restart ueco
+            pm2 restart ueco || pm2 start npm --name "ueco" -- start
+
+            pm2 save
