@@ -172,7 +172,7 @@ export default function Footer() {
             <div className="text-center md:text-left">
               <p className="text-sm text-gray-500">
                 © {currentYear} UECO Entertainment Pvt. Ltd. All rights
-                reserved. Dev Dixit
+                reserved. Dev Dixit Docker
               </p>
             </div>
 
